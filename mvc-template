@@ -1,0 +1,46 @@
+// CONTROLLER
+class $NAME$ extends StatefulWidget {
+  @override
+  $NAME$Controller createState() => $NAME$Controller();
+}
+
+class $NAME$Controller extends State<$NAME$> {
+  @override
+  Widget build(BuildContext context) => $NAME$View(this);
+}
+
+// MODEL
+class $NAME$Model {
+  String element0;
+  String element1;
+  
+  $NAME$Model(this.element0, this.element1);
+
+
+  // WRITE METHODS -------------------------------------------------------------
+
+  Map<String, dynamic> _toMap() {
+    var map = Map<String, dynamic>();
+
+    map['element0'] = element0;
+    map['element1'] = element1;
+
+    return map;
+  }
+
+  // READ METHODS --------------------------------------------------------------
+
+  static $NAME$Model _fromMap(Map<String, dynamic> map) {
+    return $NAME$Model(map['element0'], map['element1']);
+  }
+}
+
+// VIEW
+class $NAME$View extends WidgetView<$NAME$, $NAME$Controller> {
+  $NAME$View($NAME$Controller state) : super(state);
+ 
+  @override
+  Widget build(BuildContext context) {
+    return Container($END$);
+  }
+}
